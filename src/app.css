@@ -119,11 +119,11 @@
 }
 
 .space-background {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
   justify-content: center;
-  background-size: cover;
   align-items: center;
   overflow: hidden;
   display: flex;
@@ -137,6 +137,7 @@
 }
 @media (max-width: 576px) {
   .space-background {
+    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow-mobile.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
     height: 452px;
   }
 }

@@ -3,7 +3,7 @@ import burgerMenu from "./assets/icons/burder-menu.svg";
 import crossMenu from "./assets/icons/cross-menu.svg";
 import earth from "./assets/images/earth.png";
 import logo from "./assets/icons/logo.svg";
-import "./App.scss";
+import "./app.css";
 
 const App = () => {
   const [isHovered, setIsHovered] = useState(false);
