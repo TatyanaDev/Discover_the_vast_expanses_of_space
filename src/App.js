@@ -10,6 +10,29 @@ const App = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const offersData = [
+    {
+      title: "Move the borders of reality!",
+      description: (
+        <>
+          Go on a space adventure <span>- it's possible with us!</span>
+        </>
+      ),
+    },
+    {
+      title: "Space is not just stars and planets",
+      description: "it is a majestic journey to",
+    },
+    {
+      title: "For those who dream of stars",
+      description: "Our offer: make your dream come true",
+    },
+    {
+      title: "Fulfill your fantastic dreams",
+      description: "Space has never been so close",
+    },
+  ];
+
   return (
     <>
       <header className="header">
@@ -75,31 +98,13 @@ const App = () => {
               <h2 className="offers__title">Offers</h2>
 
               <div className="offers__grid">
-                <article className="offers__card">
-                  <h3 className="offers__card-title">Move the borders of reality!</h3>
-                  <p className="offers__card-description">
-                    Go on a space adventure <span>- it's possible with us!</span>
-                  </p>
-                  <button className="offers__card-button">Learn more</button>
-                </article>
-
-                <article className="offers__card">
-                  <h3 className="offers__card-title">Space is not just stars and planets</h3>
-                  <p className="offers__card-description">it is a majestic journey to</p>
-                  <button className="offers__card-button">Learn more</button>
-                </article>
-
-                <article className="offers__card">
-                  <h3 className="offers__card-title">For those who dream of stars</h3>
-                  <p className="offers__card-description">Our offer: make your dream come true</p>
-                  <button className="offers__card-button">Learn more</button>
-                </article>
-
-                <article className="offers__card">
-                  <h3 className="offers__card-title">Fulfill your fantastic dreams</h3>
-                  <p className="offers__card-description">Space has never been so close</p>
-                  <button className="offers__card-button">Learn more</button>
-                </article>
+                {offersData.map((offer, index) => (
+                  <article className="offers__card" key={index}>
+                    <h3 className="offers__card-title">{offer.title}</h3>
+                    <p className="offers__card-description">{offer.description}</p>
+                    <button className="offers__card-button">Learn more</button>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
