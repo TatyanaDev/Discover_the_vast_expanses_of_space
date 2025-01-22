@@ -9,6 +9,10 @@ $color-white: #ffffff;
   margin: 0 auto;
 }
 
+@mixin px-to-rem($px, $base-font-size: 16) {
+  font-size: #{$px / $base-font-size}rem;
+}
+
 @mixin responsive-container-padding($padding-large, $padding-medium, $padding-small) {
   padding: $padding-large;
 
@@ -37,9 +41,9 @@ $color-white: #ffffff;
 }
 
 .button {
+  @include px-to-rem(22);
   border-radius: 100px;
   line-height: 26.4px;
-  font-size: 1.375rem;
   font-weight: 700;
 }
 
@@ -107,8 +111,8 @@ $color-white: #ffffff;
   }
 
   &__link {
+    @include px-to-rem(18);
     color: $color-white;
-    font-size: 1.125rem;
     line-height: 21.6px;
     position: relative;
     margin-right: 60px;
@@ -162,9 +166,9 @@ $color-white: #ffffff;
     }
 
     @media (max-width: 576px) {
+      @include px-to-rem(16);
       margin-bottom: 10px;
       margin-right: 0;
-      font-size: 1rem;
     }
   }
 }
@@ -242,9 +246,9 @@ $color-white: #ffffff;
     }
 
     @media (max-width: 576px) {
+      @include px-to-rem(16);
       line-height: 19.2px;
       padding: 7px 40px;
-      font-size: 1rem;
     }
   }
 
@@ -285,20 +289,20 @@ $color-white: #ffffff;
   }
 
   &__title {
+    @include px-to-rem(32);
     color: $color-white;
     margin-bottom: 40px;
     line-height: 38.4px;
-    font-size: 2rem;
 
     @media (max-width: 1200px) {
+      @include px-to-rem(24);
       margin-bottom: 30px;
       line-height: 28.8px;
-      font-size: 1.5rem;
     }
 
     @media (max-width: 768px) {
+      @include px-to-rem(18);
       line-height: 21.6px;
-      font-size: 1.125rem;
     }
   }
 
@@ -372,12 +376,12 @@ $color-white: #ffffff;
     grid-column: 1 / -1;
 
     .offers__card-title {
-      font-size: 4.625rem;
+      @include px-to-rem(74);
       line-height: 74px;
     }
 
     .offers__card-description {
-      font-size: 1.625rem;
+      @include px-to-rem(26);
       line-height: 31.2px;
     }
   }
@@ -395,13 +399,13 @@ $color-white: #ffffff;
     grid-column: span 1;
 
     .offers__card-title {
-      font-size: 2.875rem;
+      @include px-to-rem(46);
       line-height: 46px;
     }
 
     .offers__card-description {
+      @include px-to-rem(24);
       line-height: 28.8px;
-      font-size: 1.5rem;
     }
   }
 
@@ -429,19 +433,18 @@ $color-white: #ffffff;
       padding: 106px 27px 27px 25px;
 
       .offers__card-title {
-        font-size: 2.5rem;
+        @include px-to-rem(40);
         line-height: 40px;
       }
 
-      .offers__card-description {
+      .offers__card-description,
+      .offers__card-button {
+        @include px-to-rem(16);
         line-height: 19.2px;
-        font-size: 1rem;
       }
 
       .offers__card-button {
-        line-height: 19.2px;
         padding: 5px 38px;
-        font-size: 1rem;
       }
     }
   }
@@ -499,20 +502,20 @@ $color-white: #ffffff;
   }
 
   &__title {
+    @include px-to-rem(32);
     margin-bottom: 17px;
     line-height: 38.4px;
-    font-size: 2rem;
 
     @media (max-width: 768px) {
+      @include px-to-rem(24);
       line-height: 28.8px;
       margin-bottom: 13px;
-      font-size: 1.5rem;
     }
 
     @media (max-width: 576px) {
+      @include px-to-rem(18);
       line-height: 21.6px;
       margin-bottom: 20px;
-      font-size: 1.125rem;
     }
   }
 
@@ -520,9 +523,9 @@ $color-white: #ffffff;
     transition: all 0.3s ease-in-out;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    @include px-to-rem(20);
     display: -webkit-box;
     margin-bottom: 17px;
-    font-size: 1.25rem;
     line-height: 24px;
     overflow: hidden;
     font-weight: 700;
@@ -540,8 +543,8 @@ $color-white: #ffffff;
 
   &__button {
     transition: color 0.3s ease-in-out;
+    @include px-to-rem(20);
     color: $color-yellow;
-    font-size: 1.25rem;
     line-height: 24px;
     cursor: pointer;
 
@@ -561,13 +564,13 @@ $color-white: #ffffff;
   &__description,
   &__button {
     @media (max-width: 768px) {
+      @include px-to-rem(16);
       line-height: 19.2px;
-      font-size: 1rem;
     }
 
     @media (max-width: 576px) {
+      @include px-to-rem(14);
       line-height: 16.8px;
-      font-size: 0.875rem;
     }
   }
 
@@ -602,8 +605,8 @@ $color-white: #ffffff;
   }
 
   &__text {
+    @include px-to-rem(18);
     color: $color-yellow;
-    font-size: 1.125rem;
     line-height: 28px;
   }
 }
