@@ -27,6 +27,16 @@
     padding: 5px 20px;
   }
 }
+.header__logo img {
+  max-height: 35px;
+  max-width: 104px;
+}
+@media (max-width: 768px) {
+  .header__logo img {
+    max-height: 24px;
+    max-width: 71px;
+  }
+}
 .header__menu-icon {
   cursor: pointer;
   display: none;
@@ -112,16 +122,6 @@
     margin-bottom: 10px;
     margin-right: 0;
     font-size: 1rem;
-  }
-}
-.header__logo img {
-  max-height: 35px;
-  max-width: 104px;
-}
-@media (max-width: 768px) {
-  .header__logo img {
-    max-height: 24px;
-    max-width: 71px;
   }
 }
 
@@ -549,6 +549,21 @@
 }
 .space-journey__toggle:checked ~ .space-journey__button .button-text--less {
   display: inline-block;
+}
+
+.footer {
+  background: #000000;
+}
+.footer__container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.footer__text {
+  color: #ebff00;
+  font-size: 1.125rem;
+  line-height: 28px;
 }
 
 /*# sourceMappingURL=app.css.map */

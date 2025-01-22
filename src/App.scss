@@ -63,6 +63,16 @@ $color-white: #ffffff;
     }
   }
 
+  &__logo img {
+    max-height: 35px;
+    max-width: 104px;
+
+    @media (max-width: 768px) {
+      max-height: 24px;
+      max-width: 71px;
+    }
+  }
+
   &__menu-icon {
     cursor: pointer;
     display: none;
@@ -155,16 +165,6 @@ $color-white: #ffffff;
       margin-bottom: 10px;
       margin-right: 0;
       font-size: 1rem;
-    }
-  }
-
-  &__logo img {
-    max-height: 35px;
-    max-width: 104px;
-
-    @media (max-width: 768px) {
-      max-height: 24px;
-      max-width: 71px;
     }
   }
 }
@@ -589,5 +589,21 @@ $color-white: #ffffff;
         display: inline-block; // Showing the “Read less”
       }
     }
+  }
+}
+
+.footer {
+  background: $color-black;
+
+  &__container {
+    @include max-width-container;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  &__text {
+    color: $color-yellow;
+    font-size: 1.125rem;
+    line-height: 28px;
   }
 }
