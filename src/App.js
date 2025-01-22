@@ -68,51 +68,53 @@ const App = () => {
           </div>
         </section>
 
-        <section className="offers">
-          <div className="offers__container">
-            <h2 className="offers__title">Offers</h2>
+        <div className="combined-sections">
+          <section className="offers">
+            <div className="offers__container">
+              <h2 className="offers__title">Offers</h2>
 
-            <div className="offers__grid">
-              <article className="offers__card">
-                <h3 className="offers__card-title">Move the borders of reality!</h3>
-                <p className="offers__card-description">
-                  Go on a space adventure <span>- it's possible with us!</span>
-                </p>
-                <button className="offers__card-button">Learn more</button>
-              </article>
+              <div className="offers__grid">
+                <article className="offers__card">
+                  <h3 className="offers__card-title">Move the borders of reality!</h3>
+                  <p className="offers__card-description">
+                    Go on a space adventure <span>- it's possible with us!</span>
+                  </p>
+                  <button className="offers__card-button">Learn more</button>
+                </article>
 
-              <article className="offers__card">
-                <h3 className="offers__card-title">Space is not just stars and planets</h3>
-                <p className="offers__card-description">it is a majestic journey to</p>
-                <button className="offers__card-button">Learn more</button>
-              </article>
+                <article className="offers__card">
+                  <h3 className="offers__card-title">Space is not just stars and planets</h3>
+                  <p className="offers__card-description">it is a majestic journey to</p>
+                  <button className="offers__card-button">Learn more</button>
+                </article>
 
-              <article className="offers__card">
-                <h3 className="offers__card-title">For those who dream of stars</h3>
-                <p className="offers__card-description">Our offer: make your dream come true</p>
-                <button className="offers__card-button">Learn more</button>
-              </article>
+                <article className="offers__card">
+                  <h3 className="offers__card-title">For those who dream of stars</h3>
+                  <p className="offers__card-description">Our offer: make your dream come true</p>
+                  <button className="offers__card-button">Learn more</button>
+                </article>
 
-              <article className="offers__card">
-                <h3 className="offers__card-title">Fulfill your fantastic dreams</h3>
-                <p className="offers__card-description">Space has never been so close</p>
-                <button className="offers__card-button">Learn more</button>
-              </article>
+                <article className="offers__card">
+                  <h3 className="offers__card-title">Fulfill your fantastic dreams</h3>
+                  <p className="offers__card-description">Space has never been so close</p>
+                  <button className="offers__card-button">Learn more</button>
+                </article>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="space-journey">
-          <div className="space-journey__container">
-            <h4 className="space-journey__title">Embark on a space journey</h4>
-            <input type="checkbox" id="toggle" className="space-journey__toggle" />
-            <p className="space-journey__description">Travelling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions.</p>
-            <label for="toggle" className="space-journey__button">
-              <span className="button-text--more">Read more</span>
-              <span className="button-text--less">Read less</span>
-            </label>
-          </div>
-        </section>
+          <section className="space-journey">
+            <div className="space-journey__container">
+              <h4 className="space-journey__title">Embark on a space journey</h4>
+              <input type="checkbox" id="toggle" className="space-journey__toggle" />
+              <p className="space-journey__description">Travelling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions.</p>
+              <label for="toggle" className="space-journey__button">
+                <span className="button-text--more">Read more</span>
+                <span className="button-text--less">Read less</span>
+              </label>
+            </div>
+          </section>
+        </div>
       </main>
     </>
   );

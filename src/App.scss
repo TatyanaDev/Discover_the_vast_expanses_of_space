@@ -1,7 +1,6 @@
 $color-pink: #ff70d9;
 $color-yellow: #ebff00;
 $color-yellow-hover: #ebff0099;
-$color-dark-blue: #304571;
 $color-black: #000000;
 $color-white: #ffffff;
 
@@ -171,7 +170,7 @@ $color-white: #ffffff;
 }
 
 .space-background {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
+  background-image: url("./assets/images/shadow.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
   background-position: center center, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -187,7 +186,7 @@ $color-white: #ffffff;
   }
 
   @media (max-width: 576px) {
-    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow-mobile.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
+    background-image: url("./assets/images/shadow-mobile.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
     height: 452px;
   }
 
@@ -267,9 +266,11 @@ $color-white: #ffffff;
   }
 }
 
-.offers {
-  background-color: $color-dark-blue;
+.combined-sections {
+  background: linear-gradient(to bottom left, #142650, #2e436f);
+}
 
+.offers {
   &__container {
     @include max-width-container;
     padding: 58px 80px;
@@ -335,7 +336,7 @@ $color-white: #ffffff;
 
     @each $index, $image in $images {
       &:nth-child(#{$index}) {
-        background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("#{$image}");
+        background-image: url("./assets/images/shadow.svg"), url("#{$image}");
         background-position: center left, center center;
         background-repeat: no-repeat, no-repeat;
         background-size: cover, cover;
@@ -483,8 +484,6 @@ $color-white: #ffffff;
 }
 
 .space-journey {
-  background-color: $color-dark-blue;
-
   &__container {
     @include max-width-container;
     padding: 4px 80px 60px;

@@ -126,7 +126,7 @@
 }
 
 .space-background {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
+  background-image: url("./assets/images/shadow.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
   background-position: center center, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -144,7 +144,7 @@
 }
 @media (max-width: 576px) {
   .space-background {
-    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow-mobile.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
+    background-image: url("./assets/images/shadow-mobile.svg"), url("./assets/images/discover-the-vast-expanses-of-space-bg.png");
     height: 452px;
   }
 }
@@ -258,9 +258,10 @@
   }
 }
 
-.offers {
-  background-color: #304571;
+.combined-sections {
+  background: linear-gradient(to bottom left, #142650, #2e436f);
 }
+
 .offers__container {
   max-width: 1248px;
   margin: 0 auto;
@@ -321,25 +322,25 @@
   transform: translateY(-5px);
 }
 .offers__card:nth-child(1) {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/move-the-borders-of-reality-bg.png");
+  background-image: url("./assets/images/shadow.svg"), url("./assets/images/move-the-borders-of-reality-bg.png");
   background-position: center left, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 }
 .offers__card:nth-child(2) {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/space-is-not-just-stars-and-planets-bg.png");
+  background-image: url("./assets/images/shadow.svg"), url("./assets/images/space-is-not-just-stars-and-planets-bg.png");
   background-position: center left, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 }
 .offers__card:nth-child(3) {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/for-those-who-dream-of-stars-bg.png");
+  background-image: url("./assets/images/shadow.svg"), url("./assets/images/for-those-who-dream-of-stars-bg.png");
   background-position: center left, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 }
 .offers__card:nth-child(4) {
-  background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/fulfill-your-fantastic-dreams-bg.png");
+  background-image: url("./assets/images/shadow.svg"), url("./assets/images/fulfill-your-fantastic-dreams-bg.png");
   background-position: center left, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -449,9 +450,6 @@
   }
 }
 
-.space-journey {
-  background-color: #304571;
-}
 .space-journey__container {
   max-width: 1248px;
   margin: 0 auto;
