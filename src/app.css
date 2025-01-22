@@ -217,6 +217,7 @@
   }
 }
 .space-background__button {
+  transition: background-color 0.3s ease-in-out;
   background-color: #ebff00;
   border-radius: 100px;
   color: #000000;
@@ -224,6 +225,9 @@
   line-height: 26.4px;
   padding: 14px 40px;
   font-weight: 700;
+}
+.space-background__button:hover {
+  background-color: rgba(235, 255, 0, 0.6);
 }
 @media (max-width: 576px) {
   .space-background__button {
@@ -248,6 +252,60 @@
   .space-background__image {
     right: 10px;
     top: 70px;
+  }
+}
+
+.offers {
+  background-color: #304571;
+}
+.offers__container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 58px 80px;
+}
+.offers__title {
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 38.4px;
+  font-size: 2rem;
+}
+.offers__grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  display: grid;
+}
+.offers__card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  background: #333;
+}
+.offers__card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+.offers__card:nth-child(1), .offers__card:nth-child(4) {
+  grid-column: 1/-1;
+}
+.offers__card:nth-child(2), .offers__card:nth-child(3) {
+  grid-column: span 1;
+}
+@media (max-width: 768px) {
+  .offers {
+    /* Resetting the settings for the first and last card */
+  }
+  .offers__card {
+    grid-column: auto; /* Cancel previous grid-column settings for all cards */
+  }
+  .offers__card:nth-child(1), .offers__card:nth-child(4) {
+    grid-column: span 1; /* Specify that they occupy only one column */
+  }
+}
+@media (max-width: 576px) {
+  .offers__grid {
+    grid-template-columns: 1fr; /* Each card occupies the full width of one column */
   }
 }
 
