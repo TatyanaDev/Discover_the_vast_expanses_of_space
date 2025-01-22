@@ -68,33 +68,35 @@ const App = () => {
           </div>
         </section>
 
-        <section class="offers">
-          <div class="offers__container">
-            <h2 class="offers__title">Offers</h2>
+        <section className="offers">
+          <div className="offers__container">
+            <h2 className="offers__title">Offers</h2>
 
-            <div class="offers__grid">
-              <article class="offers__card">
-                <h3 class="offers__card-title">Move the borders of reality!</h3>
-                <p class="offers__card-description">Go on a space adventure - it's possible with us!</p>
-                <button class="offers__card-button">Learn more</button>
+            <div className="offers__grid">
+              <article className="offers__card">
+                <h3 className="offers__card-title">Move the borders of reality!</h3>
+                <p className="offers__card-description">
+                  Go on a space adventure <span>- it's possible with us!</span>
+                </p>
+                <button className="offers__card-button">Learn more</button>
               </article>
 
-              <article class="offers__card">
-                <h3 class="offers__card-title">Space is not just stars and planets</h3>
-                <p class="offers__card-description">Go on a space adventure</p>
-                <button class="offers__card-button">Learn more</button>
+              <article className="offers__card">
+                <h3 className="offers__card-title">Space is not just stars and planets</h3>
+                <p className="offers__card-description">it is a majestic journey to</p>
+                <button className="offers__card-button">Learn more</button>
               </article>
 
-              <article class="offers__card">
-                <h3 class="offers__card-title">For those who dream of stars</h3>
-                <p class="offers__card-description">Our offer: make your dream come true</p>
-                <button class="offers__card-button">Learn more</button>
+              <article className="offers__card">
+                <h3 className="offers__card-title">For those who dream of stars</h3>
+                <p className="offers__card-description">Our offer: make your dream come true</p>
+                <button className="offers__card-button">Learn more</button>
               </article>
 
-              <article class="offers__card">
-                <h3 class="offers__card-title">Fulfill your fantastic dreams</h3>
-                <p class="offers__card-description">Space has never been so close</p>
-                <button class="offers__card-button">Learn more</button>
+              <article className="offers__card">
+                <h3 className="offers__card-title">Fulfill your fantastic dreams</h3>
+                <p className="offers__card-description">Space has never been so close</p>
+                <button className="offers__card-button">Learn more</button>
               </article>
             </div>
           </div>
