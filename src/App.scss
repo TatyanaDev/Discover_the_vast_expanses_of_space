@@ -36,6 +36,13 @@ $color-white: #ffffff;
   }
 }
 
+.button {
+  border-radius: 100px;
+  line-height: 26.4px;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
 .header {
   background: $color-black;
 
@@ -224,14 +231,11 @@ $color-white: #ffffff;
   }
 
   &__button {
+    @extend .button;
     transition: background-color 0.3s ease-in-out;
     background-color: $color-yellow;
-    border-radius: 100px;
     color: $color-black;
-    font-size: 1.375rem;
-    line-height: 26.4px;
     padding: 14px 40px;
-    font-weight: 700;
 
     &:hover {
       background-color: #ebff0099;
@@ -268,6 +272,14 @@ $color-white: #ffffff;
   &__container {
     @include max-width-container;
     padding: 58px 80px;
+
+    @media (max-width: 1200px) {
+      padding: 55px 30px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 50px 20px;
+    }
   }
 
   &__title {
@@ -275,12 +287,31 @@ $color-white: #ffffff;
     margin-bottom: 40px;
     line-height: 38.4px;
     font-size: 2rem;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+      line-height: 28.8px;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      line-height: 21.6px;
+      font-size: 1.125rem;
+    }
   }
 
   &__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     display: grid;
+
+    @media (max-width: 1200px) {
+      grid-gap: 30px;
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr; /* Each card occupies the full width of one column */
+    }
   }
 
   &__card {
@@ -293,174 +324,100 @@ $color-white: #ffffff;
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
       transform: translateY(-5px);
     }
-  }
 
-  &__card:nth-child(1) {
-    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/move-the-borders-of-reality-bg.png");
-    background-position: center left, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    padding: 35px 385px 37px 35px;
-    grid-column: 1 / -1;
+    $images: (
+      1: "./assets/images/move-the-borders-of-reality-bg.png",
+      2: "./assets/images/space-is-not-just-stars-and-planets-bg.png",
+      3: "./assets/images/for-those-who-dream-of-stars-bg.png",
+      4: "./assets/images/fulfill-your-fantastic-dreams-bg.png",
+    );
 
-    .offers__card-title {
-      margin-bottom: 22px;
-      font-size: 4.625rem;
-      line-height: 74px;
+    @each $index, $image in $images {
+      &:nth-child(#{$index}) {
+        background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("#{$image}");
+        background-position: center left, center center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover, cover;
+      }
     }
 
+    .offers__card-title,
     .offers__card-description {
       margin-bottom: 22px;
-      font-size: 1.625rem;
-      line-height: 31.2px;
     }
 
     .offers__card-button {
+      @extend .button;
       transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
       border: 2px solid $color-yellow;
       background-color: transparent;
       color: $color-yellow;
-      border-radius: 100px;
-      line-height: 26.4px;
-      font-size: 1.375rem;
       padding: 12px 38px;
-      font-weight: 700;
 
       &:hover {
         border-color: #ebff0099;
         color: #ebff0099;
       }
+    }
+
+    @media (max-width: 992px) {
+      grid-column: auto; /* Cancel previous grid-column settings for all cards */
+    }
+  }
+
+  &__card:nth-child(1),
+  &__card:nth-child(4) {
+    grid-column: 1 / -1;
+
+    .offers__card-title {
+      font-size: 4.625rem;
+      line-height: 74px;
+    }
+
+    .offers__card-description {
+      font-size: 1.625rem;
+      line-height: 31.2px;
+    }
+  }
+
+  &__card:nth-child(1) {
+    padding: 35px 385px 37px 35px;
+  }
+
+  &__card:nth-child(4) {
+    padding: 38px 400px 34px 35px;
+  }
+
+  &__card:nth-child(2),
+  &__card:nth-child(3) {
+    grid-column: span 1;
+
+    .offers__card-title {
+      font-size: 2.875rem;
+      line-height: 46px;
+    }
+
+    .offers__card-description {
+      line-height: 28.8px;
+      font-size: 1.5rem;
     }
   }
 
   &__card:nth-child(2) {
-    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/space-is-not-just-stars-and-planets-bg.png");
-    background-position: center left, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
     padding: 50px 160px 34px 35px;
-    grid-column: span 1;
-
-    .offers__card-title {
-      margin-bottom: 22px;
-      font-size: 2.875rem;
-      line-height: 46px;
-    }
-
-    .offers__card-description {
-      margin-bottom: 22px;
-      line-height: 28.8px;
-      font-size: 1.5rem;
-    }
-
-    .offers__card-button {
-      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      border: 2px solid $color-yellow;
-      background-color: transparent;
-      color: $color-yellow;
-      border-radius: 100px;
-      line-height: 26.4px;
-      font-size: 1.375rem;
-      padding: 12px 38px;
-      font-weight: 700;
-
-      &:hover {
-        border-color: #ebff0099;
-        color: #ebff0099;
-      }
-    }
   }
 
   &__card:nth-child(3) {
-    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/for-those-who-dream-of-stars-bg.png");
-    background-position: center left, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
     padding: 50px 50px 34px 35px;
-    grid-column: span 1;
 
     .offers__card-title {
-      margin-bottom: 22px;
-      font-size: 2.875rem;
-      line-height: 46px;
       max-width: 240px;
-    }
-
-    .offers__card-description {
-      margin-bottom: 22px;
-      line-height: 28.8px;
-      font-size: 1.5rem;
-    }
-
-    .offers__card-button {
-      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      border: 2px solid $color-yellow;
-      background-color: transparent;
-      color: $color-yellow;
-      border-radius: 100px;
-      line-height: 26.4px;
-      font-size: 1.375rem;
-      padding: 12px 38px;
-      font-weight: 700;
-
-      &:hover {
-        border-color: #ebff0099;
-        color: #ebff0099;
-      }
-    }
-  }
-
-  &__card:nth-child(4) {
-    background-image: url("./assets/images/discover-the-vast-expanses-of-space-shadow.svg"), url("./assets/images/fulfill-your-fantastic-dreams-bg.png");
-    background-position: center left, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    padding: 38px 400px 34px 35px;
-    grid-column: 1 / -1;
-
-    .offers__card-title {
-      margin-bottom: 22px;
-      font-size: 4.625rem;
-      line-height: 74px;
-    }
-
-    .offers__card-description {
-      margin-bottom: 22px;
-      font-size: 1.625rem;
-      line-height: 31.2px;
-    }
-
-    .offers__card-button {
-      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      border: 2px solid $color-yellow;
-      background-color: transparent;
-      color: $color-yellow;
-      border-radius: 100px;
-      line-height: 26.4px;
-      font-size: 1.375rem;
-      padding: 12px 38px;
-      font-weight: 700;
-
-      &:hover {
-        border-color: #ebff0099;
-        color: #ebff0099;
-      }
     }
   }
 
   @media (max-width: 1200px) {
-    &__container {
-      padding: 55px 30px;
-    }
-
-    &__title {
-      margin-bottom: 30px;
-      line-height: 28.8px;
-      font-size: 1.5rem;
-    }
-
-    &__grid {
-      grid-gap: 30px;
+    &__card:nth-child(3) .offers__card-title {
+      max-width: none;
     }
 
     &__card:nth-child(1),
@@ -485,17 +442,9 @@ $color-white: #ffffff;
         font-size: 1rem;
       }
     }
-
-    &__card:nth-child(3) .offers__card-title {
-      max-width: none;
-    }
   }
 
   @media (max-width: 992px) {
-    &__card {
-      grid-column: auto; /* Cancel previous grid-column settings for all cards */
-    }
-
     &__card:nth-child(1) .offers__card-description span {
       display: none;
     }
@@ -508,11 +457,6 @@ $color-white: #ffffff;
   }
 
   @media (max-width: 768px) {
-    &__title {
-      line-height: 21.6px;
-      font-size: 1.125rem;
-    }
-
     &__card:nth-child(3) .offers__card-title {
       max-width: 240px;
     }
@@ -528,14 +472,6 @@ $color-white: #ffffff;
   }
 
   @media (max-width: 576px) {
-    &__container {
-      padding: 50px 20px;
-    }
-
-    &__grid {
-      grid-template-columns: 1fr; /* Each card occupies the full width of one column */
-    }
-
     &__card:nth-child(1),
     &__card:nth-child(2),
     &__card:nth-child(3),
