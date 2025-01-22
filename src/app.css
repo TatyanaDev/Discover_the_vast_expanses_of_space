@@ -311,7 +311,7 @@
   }
 }
 .offers__card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border-radius: 10px;
   color: #ffffff;
   height: 350px;
@@ -447,6 +447,110 @@
   .offers__card:nth-child(1), .offers__card:nth-child(2), .offers__card:nth-child(3), .offers__card:nth-child(4) {
     padding-top: 88px;
   }
+}
+
+.space-journey {
+  background-color: #304571;
+}
+.space-journey__container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 4px 80px 60px;
+  color: #ffffff;
+}
+@media (max-width: 1200px) {
+  .space-journey__container {
+    padding: 0px 30px 53px;
+  }
+}
+@media (max-width: 576px) {
+  .space-journey__container {
+    padding: 0px 20px 50px;
+  }
+}
+.space-journey__title {
+  margin-bottom: 17px;
+  line-height: 38.4px;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .space-journey__title {
+    line-height: 28.8px;
+    margin-bottom: 13px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .space-journey__title {
+    line-height: 21.6px;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+  }
+}
+.space-journey__description {
+  transition: all 0.3s ease-in-out;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  margin-bottom: 17px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  overflow: hidden;
+  font-weight: 700;
+  line-clamp: 3;
+  opacity: 60%;
+}
+@media (max-width: 768px) {
+  .space-journey__description {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .space-journey__description {
+    -webkit-line-clamp: 6;
+  }
+}
+.space-journey__button {
+  transition: color 0.3s ease-in-out;
+  color: #ebff00;
+  font-size: 1.25rem;
+  line-height: 24px;
+  cursor: pointer;
+}
+.space-journey__button:hover {
+  color: rgba(235, 255, 0, 0.6);
+}
+.space-journey__button .button-text--more {
+  display: inline-block;
+}
+.space-journey__button .button-text--less {
+  display: none;
+}
+@media (max-width: 768px) {
+  .space-journey__description, .space-journey__button {
+    line-height: 19.2px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .space-journey__description, .space-journey__button {
+    line-height: 16.8px;
+    font-size: 0.875rem;
+  }
+}
+.space-journey__toggle {
+  display: none;
+}
+.space-journey__toggle:checked ~ .space-journey__description {
+  -webkit-line-clamp: none;
+  line-clamp: none;
+  overflow: visible;
+}
+.space-journey__toggle:checked ~ .space-journey__button .button-text--more {
+  display: none;
+}
+.space-journey__toggle:checked ~ .space-journey__button .button-text--less {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=app.css.map */

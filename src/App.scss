@@ -1,5 +1,6 @@
 $color-pink: #ff70d9;
 $color-yellow: #ebff00;
+$color-yellow-hover: #ebff0099;
 $color-dark-blue: #304571;
 $color-black: #000000;
 $color-white: #ffffff;
@@ -238,7 +239,7 @@ $color-white: #ffffff;
     padding: 14px 40px;
 
     &:hover {
-      background-color: #ebff0099;
+      background-color: $color-yellow-hover;
     }
 
     @media (max-width: 576px) {
@@ -315,7 +316,7 @@ $color-white: #ffffff;
   }
 
   &__card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 10px;
     color: $color-white;
     height: 350px;
@@ -355,8 +356,8 @@ $color-white: #ffffff;
       padding: 12px 38px;
 
       &:hover {
-        border-color: #ebff0099;
-        color: #ebff0099;
+        border-color: $color-yellow-hover;
+        color: $color-yellow-hover;
       }
     }
 
@@ -477,6 +478,117 @@ $color-white: #ffffff;
     &__card:nth-child(3),
     &__card:nth-child(4) {
       padding-top: 88px;
+    }
+  }
+}
+
+.space-journey {
+  background-color: $color-dark-blue;
+
+  &__container {
+    @include max-width-container;
+    padding: 4px 80px 60px;
+    color: $color-white;
+
+    @media (max-width: 1200px) {
+      padding: 0px 30px 53px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0px 20px 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    line-height: 38.4px;
+    font-size: 2rem;
+
+    @media (max-width: 768px) {
+      line-height: 28.8px;
+      margin-bottom: 13px;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 576px) {
+      line-height: 21.6px;
+      margin-bottom: 20px;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__description {
+    transition: all 0.3s ease-in-out;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    margin-bottom: 17px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    overflow: hidden;
+    font-weight: 700;
+    line-clamp: 3;
+    opacity: 60%;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 576px) {
+      -webkit-line-clamp: 6;
+    }
+  }
+
+  &__button {
+    transition: color 0.3s ease-in-out;
+    color: $color-yellow;
+    font-size: 1.25rem;
+    line-height: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-yellow-hover;
+    }
+
+    .button-text--more {
+      display: inline-block;
+    }
+
+    .button-text--less {
+      display: none;
+    }
+  }
+
+  &__description,
+  &__button {
+    @media (max-width: 768px) {
+      line-height: 19.2px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      line-height: 16.8px;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    &:checked {
+      ~ .space-journey__description {
+        -webkit-line-clamp: none; // Remove string limit
+        line-clamp: none;
+        overflow: visible;
+      }
+
+      ~ .space-journey__button .button-text--more {
+        display: none; // Hiding the “Read more”
+      }
+
+      ~ .space-journey__button .button-text--less {
+        display: inline-block; // Showing the “Read less”
+      }
     }
   }
 }
