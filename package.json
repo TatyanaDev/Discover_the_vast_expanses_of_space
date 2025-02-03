@@ -1,8 +1,7 @@
 {
-  "name": "discover-the-vast-expanses-of-space",
+  "name": "space-joyrney",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://TatyanaDev.github.io/Discover_the_vast_expanses_of_space",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
@@ -11,9 +10,7 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"sass --watch src/index.scss:src/index.css src/App.scss:src/app.css\"",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -35,7 +32,6 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "gh-pages": "^6.3.0",
     "sass": "1.77.6"
   }
 }
